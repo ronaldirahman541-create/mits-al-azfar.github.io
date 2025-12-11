@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - mist al-azfar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .program-card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .program-card p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .btn-details {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-details:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .vision-mission {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .vision-mission h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .vm-section {
+            margin-bottom: 30px;
+        }
+
+        .vm-section h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vm-section h3 i {
+            color: #3498db;
+        }
+
+        .vm-section p {
+            line-height: 1.6;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .curriculum {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .curriculum h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .curriculum-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .curriculum-table th,
+        .curriculum-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .curriculum-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .curriculum-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            .vision-mission,
+            .curriculum {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Program Pendidikan</h1>
+            <p>Kami menawarkan berbagai program unggulan untuk mendukung pertumbuhan dan perkembangan siswa secara holistik.</p>
+        </div>
+
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Prestasi Akademik</h3>
+                <p>Program pembinaan intensif untuk persiapan kompetisi akademik tingkat kabupaten, provinsi, dan nasional. Termasuk pelatihan olimpiade, tes standar, dan bimbingan belajar khusus.</p>
+                <a href="#" class="btn-details">Lihat Detail</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Ekstrakurikuler</h3>
+                <p>Program pengembangan karakter melalui berbagai kegiatan ekstrakurikuler seperti robotik, seni musik, teater, olahraga, dan pramuka. Setiap siswa wajib mengikuti minimal satu ekstrakurikuler.</p>
+                <a href="#" class="btn-details">Lihat Detail</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Pengajaran Inovatif</h3>
+                <p>Penerapan metode pembelajaran berbasis proyek (PBL), STEM, dan teknologi digital. Guru kami terlatih dalam menggunakan media interaktif dan platform pembelajaran online untuk meningkatkan keterlibatan siswa.</p>
+                <a href="#" class="btn-details">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="vision-mission">
+            <h2>Visi dan Misi</h2>
+            <div class="vm-section">
+                <h3><i class="fas fa-eye"></i> Visi</h3>
+                <p>Menjadi lembaga pendidikan Islam yang unggul dalam akademik, karakter, dan prestasi, serta menjadi rujukan bagi sekolah-sekolah lain di tingkat nasional.</p>
+            </div>
+            <div class="vm-section">
+                <h3><i class="fas fa-bullseye"></i> Misi</h3>
+                <p>1. Menyelenggarakan pendidikan berkualitas tinggi yang berbasis nilai-nilai Islam dan kebangsaan.<br>
+                   2. Mengembangkan potensi siswa secara optimal dalam bidang akademik, seni, dan olahraga.<br>
+                   3. Membentuk generasi muda yang beriman, bertakwa, berakhlak mulia, dan berprestasi.<br>
+                   4. Menyediakan lingkungan belajar yang aman, nyaman, dan inspiratif.</p>
+            </div>
+        </div>
+
+        <div class="curriculum">
+            <h2>Kurikulum</h2>
+            <p>Kurikulum kami dirancang sesuai dengan standar nasional pendidikan, dengan penekanan khusus pada pendidikan agama Islam dan karakter.</p>
+            <table class="curriculum-table">
+                <thead>
+                    <tr>
+                        <th>Kelas</th>
+                        <th>Mata Pelajaran Inti</th>
+                        <th>Mata Pelajaran Pilihan</th>
+                        <th>Waktu Belajar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>Agama Islam, Bahasa Indonesia, Matematika, IPA, IPS</td>
+                        <td>Seni Budaya, Olahraga</td>
+                        <td>07.00 - 13.00</td>
+                    </tr>
+                    <tr>
+                        <td>II</td>
+                        <td>Agama Islam, Bahasa Indonesia, Matematika, IPA, IPS</td>
+                        <td>Seni Budaya, Olahraga, Robotik Dasar</td>
+                        <td>07.00 - 13.00</td>
+                    </tr>
+                    <tr>
+                        <td>III</td>
+                        <td>Agama Islam, Bahasa Indonesia, Matematika, IPA, IPS</td>
+                        <td>Seni Budaya, Olahraga, Robotik Lanjutan</td>
+                        <td>07.00 - 13.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 mist al-azfar. All rights reserved.
+        </div>
+    </div>
+    <!-- Contoh di login.html -->
+<div style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html" class="btn-back" style="
+          display: inline-block; padding: 8px 20px; background: rgba(44,62,80,0.2); color: white;
+          text-decoration: none; border-radius: 6px;">
+          <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+      </div>
+</body>
+</html>

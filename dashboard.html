@@ -1,0 +1,69 @@
+<!-- Simpan sebagai dashboard.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - mist al-azfar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #f4f6f9; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+        .header {
+            display: flex; justify-content: space-between; align-items: center;
+            background: white; padding: 20px; border-radius: 12px; margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .btn-back {
+            background: #2c3e50; color: white; padding: 10px 20px; border: none;
+            border-radius: 8px; text-decoration: none; font-weight: 600;
+            display: inline-flex; align-items: center; gap: 8px;
+            transition: all 0.3s;
+        }
+        .btn-back:hover { background: #1a252f; transform: translateY(-2px); }
+        .admin-header { background: #e74c3c; color: white; padding: 20px; border-radius: 12px; text-align: center; }
+        .admin-header h1 { margin: 0; font-size: 2.2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card h3 { margin: 0 0 15px; color: #2c3e50; }
+        .stat { font-size: 2.5rem; font-weight: 700; color: #e74c3c; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ Tombol Kembali ke Beranda -->
+        <div class="header">
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+            <h2>Admin Dashboard</h2>
+        </div>
+
+        <div class="admin-header">
+            <h1>🔐 Panel Administrasi</h1>
+            <p>Anda sedang masuk sebagai admin. Kelola konten, pengguna, dan laporan di sini.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-newspaper"></i> Kelola Berita</h3>
+                <p>Tambah, edit, atau hapus berita sekolah.</p>
+                <a href="adminberita.html" class="btn-back" style="background:#3498db;"><i class="fas fa-edit"></i> Buka Halaman Berita</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-users"></i> Kelola Pengguna</h3>
+                <p>Verifikasi pendaftaran, kelola peran (siswa/orang tua/guru).</p>
+                <button class="btn-back" disabled><i class="fas fa-users-cog"></i> Segera Hadir</button>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-chart-bar"></i> Statistik</h3>
+                <div class="stat">150</div>
+                <p>Total Siswa Terdaftar</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn-back"><i class="fas fa-home"></i> Kembali ke Beranda</a>
+        </div>
+    </div>
+</body>
+</html>

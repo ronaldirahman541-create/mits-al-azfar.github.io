@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - mist al-azfar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            width: 200px;
+            color: #2c3e50;
+        }
+
+        .info-value {
+            flex: 1;
+        }
+
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .gallery-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .gallery-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .profile-card {
+                flex-direction: column;
+            }
+            .profile-image {
+                flex: 0 0 auto;
+            }
+            .profile-info {
+                min-width: auto;
+            }
+            .info-row {
+                flex-direction: column;
+            }
+            .info-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Profil Mist Al-Azhfar</h1>
+            <p>Mengetahui lebih dalam tentang sejarah, visi, misi, dan pencapaian kami.</p>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/150" alt="Logo Mist Al-Azhfar">
+            </div>
+            <div class="profile-info">
+                <h2>Tentang Kami</h2>
+                <div class="info-row">
+                    <div class="info-label">Nama Sekolah:</div>
+                    <div class="info-value">Mist Al-Azhfar</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Alamat:</div>
+                    <div class="info-value">Jl. Contoh Alamat No. 123, Kota Contoh, Indonesia</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Tanggal Berdiri:</div>
+                    <div class="info-value">1 Januari 2000</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Akreditasi:</div>
+                    <div class="info-value">A</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Kepala Sekolah:</div>
+                    <div class="info-value">Dr. Ahmad Fauzi, M.Pd.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Jumlah Siswa:</div>
+                    <div class="info-value">150 siswa</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Sejarah Singkat</h2>
+            <p>Mist Al-Azhfar didirikan pada tahun 2000 dengan tujuan menciptakan generasi muda yang cerdas, kreatif, dan berprestasi. Sejak awal berdiri, kami telah berkomitmen untuk menyediakan pendidikan berkualitas tinggi yang tidak hanya fokus pada akademik, tetapi juga pengembangan karakter dan keterampilan hidup.</p>
+            <p>Dengan fasilitas modern dan guru-guru profesional, Mist Al-Azhfar telah berhasil mencetak banyak alumni yang sukses di berbagai bidang, baik di tingkat nasional maupun internasional.</p>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Galeri Prestasi</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="foto-prestasi.jpg" alt="Foto Prestasi">
+                </div>
+                <div class="gallery-item">
+                    <img src="foto-ekskul.jpg" alt="Foto Ekstrakurikuler">
+                </div>
+                <div class="gallery-item">
+                    <img src="foto-pengajaran.jpg" alt="Foto Pengajaran">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/250x200" alt="Foto Tambahan">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 mist al-azfar. All rights reserved.
+        </div>
+    </div>
+    <!-- Contoh di login.html -->
+<div style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html" class="btn-back" style="
+          display: inline-block; padding: 8px 20px; background: rgba(44,62,80,0.2); color: white;
+          text-decoration: none; border-radius: 6px;">
+          <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+      </div>
+</body>
+</html>

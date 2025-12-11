@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - mist al-azfar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .register-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .register-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #08e935;
+            box-shadow: 0 0 15px rgba(8, 233, 53, 0.3);
+        }
+
+        .input-group i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-register {
+            background: #08e935;
+            color: #000;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(8, 233, 53, 0.4);
+        }
+
+        .btn-register:hover {
+            background: #07d12f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(8, 233, 53, 0.5);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: #08e935;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #08e935;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h2><i class="fas fa-user-plus"></i> Daftar Akun</h2>
+            <p>Buat akun baru untuk bergabung dengan kami</p>
+        </div>
+        <form class="register-form">
+            <div class="input-group">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Nomor Telepon" required>
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Kata Sandi" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Konfirmasi Kata Sandi" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-group">
+                <select required>
+                    <option value="" disabled selected>Pilih Peran</option>
+                    <option value="siswa">Siswa</option>
+                    <option value="orangtua">Orang Tua</option>
+                    <option value="guru">Guru</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <i class="fas fa-users"></i>
+            </div>
+            <button type="submit" class="btn-register">Daftar</button>
+        </form>
+        <div class="form-footer">
+            <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+        </div>
+        <a href="index.html" class="back-home">Kembali ke Beranda</a>
+    </div>
+    <!-- Contoh di login.html -->
+<div style="text-align: center; margin-bottom: 20px;">
+        <a href="index.html" class="btn-back" style="
+          display: inline-block; padding: 8px 20px; background: rgba(44,62,80,0.2); color: white;
+          text-decoration: none; border-radius: 6px;">
+          <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+      </div>
+</body>
+</html>
